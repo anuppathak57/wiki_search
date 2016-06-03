@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.location.anup.searchwiki.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="@dimen/activity_edit_text_width"
+            android:id="@+id/search_text_input"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/search_edit_text"
+                android:singleLine="true"
+                android:hint="@string/please_enter_search_term"
+                android:layout_height="wrap_content"/>
+
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/search_button"
+            android:layout_centerVertical="true"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_alignParentRight="true"
+            android:text="@string/submit"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:background="@android:color/darker_gray"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/image_view_rv"
+        android:padding="@dimen/activity_vertical_margin"
+        android:background="@color/rv_bg_color"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
